@@ -1,11 +1,12 @@
 version: '3'
 services:
-  web:
-    container_name: web
-    image: web-test
+  test:
+    container_name: test
+    image: restart-image
     build:
       context: .
       dockerfile: Dockerfile
+    restart: on-failure
       
 
 
